@@ -15,10 +15,14 @@ namespace CapaPresentacion
         private static IconMenuItem menuActivo = null;
         private static Form formularioActivo;
 
-        public FrmInicio(Usuario objUsuario)
+        public FrmInicio(Usuario objUsuario = null)
         {
+            if (objUsuario == null)
+                usuarioActual = new Usuario() { NombreCompleto = "DEFAULT", IdUsuario = 2 };
+            else
+                usuarioActual = objUsuario;
+
             InitializeComponent();
-            usuarioActual = objUsuario;
         }
 
         private void FrmInicio_Load(object sender, EventArgs e)
