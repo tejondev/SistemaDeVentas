@@ -34,7 +34,7 @@ namespace CapaPresentacion
             if(usuario != null)
             {
                 // Abrir siguiente formulario ====================================================
-                FrmInicio form = new FrmInicio();
+                FrmInicio form = new FrmInicio(usuario);
                 form.Show();
 
                 // Ocultar login
